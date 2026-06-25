@@ -1,25 +1,23 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
-    const target = document.querySelector(this.getAttribute("href"));
+document.addEventListener("DOMContentLoaded", () => {
+  const revealItems = document.querySelectorAll(
+    ".hero-left, .hero-dashboard, .launch-card, .stats-section, .product-card, .ai-section, .why-grid div, .contact-section"
+  );
 
-    if (target) {
-      e.preventDefault();
-      target.scrollIntoView({
-        behavior: "smooth",
-        block: "start"
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
       });
+    },
+    {
+      threshold: 0.12,
     }
+  );
+
+  revealItems.forEach((item) => {
+    item.classList.add("reveal");
+    observer.observe(item);
   });
 });
-
-const form = document.querySelector(".contact-form");
-
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
-
-    alert("Demo talebiniz alınmıştır. En kısa sürede sizinle iletişime geçilecektir.");
-
-    form.reset();
-  });
-}
