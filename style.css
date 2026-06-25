@@ -21,3 +21,13 @@ document.addEventListener("DOMContentLoaded", () => {
     observer.observe(item);
   });
 });
+.reveal {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: 0.7s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
