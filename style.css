@@ -1855,3 +1855,102 @@ body {
     color:#5d6b82;
     line-height:1.8;
 }
+.breadcrumb{
+    font-size:14px;
+    color:#7c8ca2;
+    margin-bottom:18px;
+    font-weight:600;
+}
+
+.nobet-hero{
+    background:
+        radial-gradient(circle at 85% 15%, rgba(0,180,255,.12), transparent 28%),
+        radial-gradient(circle at 10% 20%, rgba(0,120,255,.08), transparent 30%),
+        linear-gradient(135deg,#f8fbff 0%,#eef6ff 50%,#ffffff 100%);
+}
+
+.nobet-visual-enhanced{
+    position:relative;
+}
+
+.nobet-visual-enhanced img{
+    width:100%;
+    border-radius:24px;
+    box-shadow:0 30px 70px rgba(8,42,92,.18);
+}
+
+.visual-note-card{
+    position:absolute;
+    top:-30px;
+    right:-20px;
+
+    width:360px;
+
+    padding:28px;
+
+    border-radius:22px;
+
+    background:linear-gradient(135deg,#082f66,#0b4f9c);
+
+    color:#fff;
+
+    box-shadow:0 25px 70px rgba(8,47,102,.30);
+
+    z-index:5;
+}
+
+.visual-note-card span{
+    display:inline-block;
+    margin-bottom:8px;
+    color:#8be4ff;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.5px;
+}
+
+.visual-note-card h3{
+    color:#fff;
+    font-size:26px;
+    line-height:1.25;
+    margin-bottom:14px;
+}
+
+.visual-note-card p{
+    color:rgba(255,255,255,.88);
+    line-height:1.7;
+    font-size:15px;
+}
+
+.product-video-section{
+    background:#f7fbff;
+}
+
+.video-frame{
+    margin-top:45px;
+    border-radius:24px;
+    overflow:hidden;
+    box-shadow:0 25px 60px rgba(0,0,0,.16);
+}
+
+.video-frame video{
+    width:100%;
+    display:block;
+}
+
+@media(max-width:992px){
+
+.visual-note-card{
+
+    position:relative;
+
+    width:100%;
+
+    top:0;
+
+    right:0;
+
+    margin-bottom:25px;
+
+}
+
+}
