@@ -5,6 +5,130 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AYÇA Nöbet | Eczane Odaları İçin Akıllı Nöbet Planlama</title>
   <link rel="stylesheet" href="/style.css?v=5.3" />
+
+  <style>
+    /* AYÇA Nöbet V6.1 - hero sağ üst referans alanı */
+    .nobet-hero-grid{
+      align-items:center;
+    }
+
+    .nobet-hero-copy .nobet-reference-card,
+    .nobet-hero-copy .nobet-metrics{
+      display:none;
+    }
+
+    .nobet-dashboard-visual{
+      position:relative;
+      overflow:visible;
+      padding-top:92px;
+    }
+
+    .nobet-dashboard-visual img{
+      position:relative;
+      z-index:1;
+      width:108%;
+      max-width:none;
+      transform:translateX(-2%);
+      border-radius:28px;
+      box-shadow:0 34px 80px rgba(7,56,92,.16);
+    }
+
+    .nobet-hero-info-panel{
+      position:absolute;
+      z-index:3;
+      top:0;
+      right:0;
+      width:min(520px, 92%);
+      padding:18px;
+      border:1px solid rgba(17,185,143,.28);
+      border-radius:26px;
+      background:linear-gradient(135deg, rgba(232,255,248,.96), rgba(238,249,255,.96));
+      box-shadow:0 24px 60px rgba(7,56,92,.12);
+      backdrop-filter:blur(14px);
+    }
+
+    .nobet-reference-inline{
+      display:flex;
+      align-items:center;
+      gap:14px;
+      padding:2px 4px 14px;
+      color:#007e68;
+      border-bottom:1px solid rgba(17,185,143,.18);
+    }
+
+    .nobet-reference-inline strong{
+      display:flex;
+      align-items:center;
+      gap:7px;
+      color:#007e68;
+      font-size:15px;
+      white-space:nowrap;
+    }
+
+    .nobet-reference-inline span{
+      color:#08705f;
+      font-size:14px;
+      line-height:1.45;
+    }
+
+    .nobet-metrics-inline{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:10px;
+      margin-top:14px;
+    }
+
+    .nobet-metrics-inline div{
+      padding:14px 12px;
+      border-radius:18px;
+      background:#ffffff;
+      border:1px solid rgba(190,219,240,.78);
+      box-shadow:0 12px 28px rgba(7,56,92,.06);
+    }
+
+    .nobet-metrics-inline strong{
+      display:block;
+      color:#07385c;
+      font-size:24px;
+      line-height:1.1;
+      margin-bottom:5px;
+    }
+
+    .nobet-metrics-inline span{
+      color:#42637f;
+      font-size:13px;
+      line-height:1.35;
+    }
+
+    @media(max-width:980px){
+      .nobet-dashboard-visual{
+        padding-top:0;
+      }
+
+      .nobet-hero-info-panel{
+        position:relative;
+        width:100%;
+        margin-bottom:18px;
+      }
+
+      .nobet-dashboard-visual img{
+        width:100%;
+        transform:none;
+      }
+    }
+
+    @media(max-width:620px){
+      .nobet-reference-inline{
+        align-items:flex-start;
+        flex-direction:column;
+        gap:6px;
+      }
+
+      .nobet-metrics-inline{
+        grid-template-columns:1fr;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -44,28 +168,31 @@
           kontrollerini tek platform üzerinden yönetmenizi sağlar.
         </p>
 
-        <div class="trust-badge nobet-reference-card">
-          <strong>🏛 Kurumsal Kullanımda</strong>
-          <span>Kahramanmaraş Eczacı Odası tarafından aktif olarak kullanılmaktadır.</span>
-        </div>
-
-        <div class="product-metrics nobet-metrics">
-          <div>
-            <strong>182+</strong>
-            <span>Aktif Eczane</span>
-          </div>
-          <div>
-            <strong>%98</strong>
-            <span>Adalet Oranı</span>
-          </div>
-          <div>
-            <strong>Dakikalar</strong>
-            <span>Planlama Süresi</span>
-          </div>
-        </div>
       </div>
 
       <div class="product-premium-visual nobet-dashboard-visual">
+        <div class="nobet-hero-info-panel">
+          <div class="nobet-reference-inline">
+            <strong>🏛 Kurumsal Kullanımda</strong>
+            <span>Kahramanmaraş Eczacı Odası tarafından aktif olarak kullanılmaktadır.</span>
+          </div>
+
+          <div class="nobet-metrics-inline">
+            <div>
+              <strong>182+</strong>
+              <span>Aktif Eczane</span>
+            </div>
+            <div>
+              <strong>%98</strong>
+              <span>Adalet Oranı</span>
+            </div>
+            <div>
+              <strong>Dakikalar</strong>
+              <span>Planlama Süresi</span>
+            </div>
+          </div>
+        </div>
+
         <img src="assets/ayca-nobet-dashboard.png" alt="AYÇA Nöbet Planlama dashboard ekranı">
       </div>
 
