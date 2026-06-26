@@ -824,3 +824,245 @@ body {
     padding: 0;
   }
 }
+
+
+/* === AYÇA V4 HERO SENKRON + PREMIUM === */
+
+.hero {
+  padding: 76px 0 72px;
+}
+
+.hero-grid {
+  grid-template-columns: minmax(0, 0.95fr) minmax(520px, 1.05fr);
+  gap: 54px;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 720px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 5.7vw, 82px);
+  line-height: 1.05;
+}
+
+.hero p {
+  font-size: 21px;
+  max-width: 680px;
+}
+
+.hero-visual-stack {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 178px;
+  gap: 18px;
+  align-items: stretch;
+}
+
+.hero-visual-stack .dashboard-card {
+  min-height: 520px;
+  height: 100%;
+  padding: 28px;
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-visual-stack .window-bar {
+  margin-bottom: 22px;
+}
+
+.hero-visual-stack .window-bar p {
+  font-size: 22px;
+  letter-spacing: -0.3px;
+}
+
+.hero-visual-stack .dashboard-stats {
+  gap: 14px;
+  margin-bottom: 26px;
+}
+
+.hero-visual-stack .dashboard-stats div {
+  padding: 24px 10px;
+}
+
+.hero-visual-stack .dashboard-stats strong {
+  font-size: 30px;
+}
+
+.hero-visual-stack .dashboard-card h3 {
+  font-size: 20px;
+  margin-bottom: 14px;
+}
+
+.hero-visual-stack .calendar {
+  grid-template-columns: 76px repeat(7, minmax(42px, 1fr));
+  gap: 8px;
+  font-size: 13px;
+}
+
+.hero-visual-stack .calendar i {
+  height: 30px;
+  border-radius: 7px;
+}
+
+.hero-visual-stack .approved {
+  margin-top: 24px;
+  font-size: 17px;
+  align-self: flex-start;
+}
+
+.insight-beta-card {
+  position: relative;
+  overflow: hidden;
+  min-height: 520px;
+  border-radius: 18px;
+  padding: 24px 18px;
+  color: #ffffff;
+  background:
+    radial-gradient(circle at 86% 86%, rgba(17,185,143,.50), transparent 26%),
+    radial-gradient(circle at 70% 55%, rgba(73,169,223,.24), transparent 32%),
+    linear-gradient(160deg, #06133a 0%, #071f4c 52%, #07385c 100%);
+  box-shadow: 0 22px 52px rgba(7, 56, 92, 0.22);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.insight-beta-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(135deg, transparent 0 40%, rgba(73,169,223,.10) 41%, transparent 42%),
+    repeating-linear-gradient(110deg, transparent 0 18px, rgba(255,255,255,.035) 19px 20px);
+  opacity: .7;
+}
+
+.insight-beta-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.insight-beta-card strong {
+  display: block;
+  font-size: 15px;
+  letter-spacing: .2px;
+}
+
+.insight-beta-card span {
+  display: block;
+  font-size: 11px;
+  opacity: .78;
+  margin-top: 2px;
+}
+
+.insight-beta-card p {
+  margin: 28px 0 4px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.insight-beta-card b {
+  display: block;
+  font-size: 74px;
+  line-height: .95;
+  letter-spacing: -3px;
+}
+
+.insight-beta-card em {
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 900;
+  letter-spacing: .8px;
+}
+
+.insight-beta-card small {
+  display: block;
+  margin-top: 34px;
+  font-size: 15px;
+  font-weight: 900;
+}
+
+/* Hero buton hizası */
+.hero-actions .btn-primary {
+  background: var(--dark);
+  color: #fff;
+}
+
+.hero-actions .btn-outline {
+  border-color: rgba(7,56,92,.18);
+  box-shadow: 0 12px 28px rgba(7,56,92,.06);
+}
+
+/* Ürün görselleri daha dolu görünsün */
+.product-image {
+  min-height: 260px;
+}
+
+.product-image img {
+  width: 100%;
+  height: 290px;
+  object-fit: cover;
+  object-position: left top;
+}
+
+/* Daha premium bölüm ayrımı */
+.section-title h2 {
+  letter-spacing: -1px;
+}
+
+.product-showcase {
+  gap: 30px;
+}
+
+.product-panel {
+  padding: 32px;
+}
+
+@media (max-width: 1180px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-visual-stack {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-beta-card {
+    min-height: auto;
+    padding: 24px;
+  }
+
+  .insight-beta-card b {
+    font-size: 58px;
+  }
+}
+
+@media (max-width: 680px) {
+  .hero-visual-stack .dashboard-card {
+    min-height: auto;
+    padding: 22px;
+  }
+
+  .hero-visual-stack .window-bar p {
+    font-size: 15px;
+  }
+
+  .hero-visual-stack .calendar {
+    grid-template-columns: 54px repeat(7, minmax(28px, 1fr));
+    gap: 5px;
+    font-size: 11px;
+  }
+
+  .hero-visual-stack .calendar i {
+    height: 25px;
+  }
+
+  .insight-beta-card {
+    border-radius: 16px;
+  }
+}
