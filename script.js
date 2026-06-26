@@ -1,6 +1,6 @@
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener("click", function (e) {
-    const target = document.querySelector(this.getAttribute("href"));
+document.querySelectorAll(‘a[href^=“#”]’).forEach(link => {
+link.addEventListener(“click”, function (e) { const target =
+document.querySelector(this.getAttribute(“href”));
 
     if (target) {
       e.preventDefault();
@@ -9,17 +9,13 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
         block: "start"
       });
     }
-  });
-});
 
-const form = document.querySelector(".contact-form");
+}); });
 
-if (form) {
-  form.addEventListener("submit", function (e) {
-    e.preventDefault();
+const revealItems = document.querySelectorAll(“.reveal”);
 
-    alert("Demo talebiniz alınmıştır. En kısa sürede sizinle iletişime geçilecektir.");
+const observer = new IntersectionObserver( entries => {
+entries.forEach(entry => { if (entry.isIntersecting) {
+entry.target.classList.add(“show”); } }); }, { threshold: 0.12 } );
 
-    form.reset();
-  });
-}
+revealItems.forEach(item => observer.observe(item));
