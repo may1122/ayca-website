@@ -4,9 +4,172 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AYÇA Insight | Eczane Analitik Platformu</title>
-  <link rel="stylesheet" href="/style.css?v=4.2" />
+  <link rel="stylesheet" href="/style.css?v=5.2" />
+
+  <style>
+    .insight-page .product-premium-grid{
+      grid-template-columns:minmax(0,.86fr) minmax(560px,1.14fr);
+      gap:56px;
+      align-items:center;
+    }
+
+    .insight-hero{
+      background:
+        radial-gradient(circle at 85% 15%, rgba(17,185,143,.20), transparent 30%),
+        radial-gradient(circle at 10% 22%, rgba(73,169,223,.12), transparent 32%),
+        linear-gradient(135deg,#f8fffc 0%,#eefdf7 48%,#ffffff 100%);
+    }
+
+    .insight-page .breadcrumb{
+      font-size:14px;
+      color:#6c7f96;
+      margin-bottom:18px;
+      font-weight:700;
+    }
+
+    .insight-page .product-premium-copy p{
+      font-size:21px;
+      line-height:1.75;
+    }
+
+    .insight-hero-right{
+      display:grid;
+      gap:22px;
+      align-items:start;
+    }
+
+    .insight-reference-panel{
+      width:100%;
+      background:linear-gradient(135deg, rgba(230,255,246,.96), rgba(241,255,250,.96));
+      border:1px solid rgba(17,185,143,.34);
+      border-radius:26px;
+      padding:22px;
+      box-shadow:0 22px 55px rgba(7,56,92,.10);
+    }
+
+    .insight-status{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:16px;
+      align-items:center;
+      padding-bottom:18px;
+      border-bottom:1px solid rgba(17,185,143,.24);
+      margin-bottom:18px;
+    }
+
+    .insight-status strong{
+      color:#008a72;
+      font-size:17px;
+      line-height:1.35;
+      white-space:nowrap;
+    }
+
+    .insight-status span{
+      color:#007b68;
+      font-size:16px;
+      line-height:1.55;
+    }
+
+    .insight-reference-panel .product-metrics{
+      margin-top:0;
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:14px;
+    }
+
+    .insight-reference-panel .product-metrics div{
+      min-height:106px;
+      background:#ffffff;
+      border:1px solid rgba(190,219,240,.9);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 14px 34px rgba(7,56,92,.07);
+    }
+
+    .insight-reference-panel .product-metrics strong{
+      color:#007b68;
+      font-size:28px;
+      line-height:1.1;
+      display:block;
+      margin-bottom:10px;
+    }
+
+    .insight-reference-panel .product-metrics span{
+      color:#42637f;
+      font-size:15px;
+    }
+
+    .insight-hero-right .product-premium-visual{
+      transform:none !important;
+      overflow:hidden;
+    }
+
+    .insight-hero-right .product-premium-visual img{
+      width:100%;
+      height:auto;
+      min-height:390px;
+      object-fit:cover;
+      object-position:left top;
+      display:block;
+    }
+
+    .insight-video-section{
+      background:linear-gradient(180deg,#ffffff,#f5fffb);
+    }
+
+    .video-frame{
+      width:100%;
+      max-width:1080px;
+      margin:42px auto 0;
+      border-radius:26px;
+      overflow:hidden;
+      background:#062b25;
+      box-shadow:0 28px 70px rgba(7,56,92,.18);
+      border:1px solid rgba(190,219,240,.9);
+    }
+
+    .video-frame video{
+      width:100%;
+      display:block;
+      background:#062b25;
+    }
+
+    .hospital-highlight.insight-green{
+      background:
+        radial-gradient(circle at right bottom, rgba(17,185,143,.22), transparent 36%),
+        linear-gradient(145deg,#ffffff,#f3fff9);
+      border-color:rgba(17,185,143,.28);
+    }
+
+    .hospital-mini-panel.insight-green-panel{
+      background:
+        radial-gradient(circle at right bottom, rgba(73,169,223,.28), transparent 32%),
+        linear-gradient(145deg,#063b33,#008a72);
+    }
+
+    @media(max-width:1180px){
+      .insight-page .product-premium-grid{
+        grid-template-columns:1fr;
+      }
+      .insight-reference-panel .product-metrics{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+    @media(max-width:720px){
+      .insight-status{
+        grid-template-columns:1fr;
+      }
+      .insight-reference-panel .product-metrics{
+        grid-template-columns:1fr;
+      }
+      .insight-hero-right .product-premium-visual img{
+        min-height:auto;
+      }
+    }
+  </style>
 </head>
-<body>
+<body class="insight-page">
 
 <header class="navbar">
   <div class="container nav-inner">
@@ -24,41 +187,54 @@
 </header>
 
 <main>
+
   <section class="product-premium-hero insight-hero">
     <div class="container product-premium-grid">
+
       <div class="product-premium-copy">
-        <a href="index.html" class="back-link">← Ana sayfaya dön</a>
+        <div class="breadcrumb">Ana Sayfa / Ürünler / AYÇA Insight</div>
+
         <span class="badge">AYÇA Insight</span>
-        <h1>Eczanenizi <span>Verilerle Yönetin</span></h1>
+
+        <h1>
+          Eczanenizi
+          <span>Verilerle Yönetin</span>
+        </h1>
+
         <p>
-          Satış, stok, kârlılık, risk ve yapay zeka destekli önerileri tek platformda birleştiren
-          sağlık analitik çözümü.
+          AYÇA Insight; satış, stok, kârlılık, risk ve hasta hareketlerini tek analitik katmanda birleştirir.
+          Eczane verilerini yalnızca raporlayan değil, karar almayı kolaylaştıran anlaşılır yönetim ekranlarına dönüştürür.
         </p>
+      </div>
 
-        <div class="insight-launch-pill">
-          <strong>Beta süreci devam ediyor</strong>
-          <span>Lansmana kalan süre: 29 gün</span>
+      <div class="insight-hero-right">
+        <div class="insight-reference-panel">
+          <div class="insight-status">
+            <strong>🚀 Beta Süreci Devam Ediyor</strong>
+            <span>AYÇA Insight, eczane ve sağlık kurumları için analitik karar destek platformu olarak geliştirilmektedir.</span>
+          </div>
+
+          <div class="product-metrics">
+            <div>
+              <strong>Satış</strong>
+              <span>Trend Analizi</span>
+            </div>
+            <div>
+              <strong>Stok</strong>
+              <span>Risk Takibi</span>
+            </div>
+            <div>
+              <strong>AI</strong>
+              <span>Öneri Motoru</span>
+            </div>
+          </div>
         </div>
 
-        <div class="product-metrics">
-          <div>
-            <strong>Satış</strong>
-            <span>Trend Analizi</span>
-          </div>
-          <div>
-            <strong>Stok</strong>
-            <span>Risk Takibi</span>
-          </div>
-          <div>
-            <strong>AI</strong>
-            <span>Öneri Motoru</span>
-          </div>
+        <div class="product-premium-visual">
+          <img src="assets/ayca-insight-dashboard.png" alt="AYÇA Insight dashboard ekranı">
         </div>
       </div>
 
-      <div class="product-premium-visual">
-        <img src="assets/ayca-insight-dashboard.png" alt="AYÇA Insight dashboard ekranı">
-      </div>
     </div>
   </section>
 
@@ -66,53 +242,96 @@
     <div class="container">
       <div class="section-title">
         <span>Neler Analiz Ediyoruz?</span>
-        <h2>Eczane Yönetimi İçin Analitik Katman</h2>
+        <h2>Eczane Yönetimi İçin Akıllı Analitik Katman</h2>
+        <p>
+          Günlük operasyonu, stok risklerini ve finansal görünümü daha anlaşılır hale getiren karar destek ekranları.
+        </p>
       </div>
 
       <div class="premium-card-grid six">
-        <div class="premium-info-card"><div class="icon">📈</div><h3>Satış Analizi</h3><p>Ürün, kategori ve dönem bazlı satış trendlerini gösterir.</p></div>
-        <div class="premium-info-card"><div class="icon">📦</div><h3>Stok Analizi</h3><p>Kritik stok, yavaş dönen ürün ve sipariş önceliklerini belirler.</p></div>
-        <div class="premium-info-card"><div class="icon">💰</div><h3>Kârlılık</h3><p>Brüt kâr, kategori kârlılığı ve performans göstergelerini takip eder.</p></div>
-        <div class="premium-info-card"><div class="icon">❤️</div><h3>Hasta Sadakati</h3><p>Hasta hareketlerini ve geri kazanım fırsatlarını analiz eder.</p></div>
-        <div class="premium-info-card"><div class="icon">⚠</div><h3>Risk Analizi</h3><p>Stok, satış ve finansal riskleri anlaşılır skorlarla özetler.</p></div>
-        <div class="premium-info-card"><div class="icon">🤖</div><h3>AI CoPilot</h3><p>Eczacının veriye dayalı karar almasını kolaylaştıran öneriler üretir.</p></div>
+        <div class="premium-info-card">
+          <div class="icon">📈</div>
+          <h3>Satış Analizi</h3>
+          <p>Ürün, kategori ve dönem bazlı satış trendlerini izleyerek güçlü ve zayıf performans alanlarını görünür hale getirir.</p>
+        </div>
+
+        <div class="premium-info-card">
+          <div class="icon">📦</div>
+          <h3>Stok Analizi</h3>
+          <p>Kritik stokları, yavaş dönen ürünleri ve sipariş önceliklerini anlaşılır göstergelerle takip eder.</p>
+        </div>
+
+        <div class="premium-info-card">
+          <div class="icon">💰</div>
+          <h3>Kârlılık Takibi</h3>
+          <p>Ciro, brüt kâr ve kategori performansını birlikte değerlendirerek finansal görünümü netleştirir.</p>
+        </div>
+
+        <div class="premium-info-card">
+          <div class="icon">❤️</div>
+          <h3>Hasta Sadakati</h3>
+          <p>Hasta hareketlerini, tekrar ziyaretleri ve geri kazanım fırsatlarını analiz ederek bağlılığı güçlendirir.</p>
+        </div>
+
+        <div class="premium-info-card">
+          <div class="icon">⚠</div>
+          <h3>Risk Analizi</h3>
+          <p>Stok, satış ve operasyonel riskleri skorlar halinde özetleyerek önceliklendirme sağlar.</p>
+        </div>
+
+        <div class="premium-info-card">
+          <div class="icon">🤖</div>
+          <h3>AI CoPilot</h3>
+          <p>Eczacının veriye dayalı karar almasını kolaylaştıran yorumlar, uyarılar ve öneriler üretir.</p>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section screen-showcase-section">
+  <section class="section insight-video-section">
     <div class="container">
-      <div class="large-screen-card">
-        <img src="assets/ayca-insight-dashboard.png" alt="AYÇA Insight büyük dashboard ekranı">
+      <div class="section-title">
+        <span>Ürünü Keşfedin</span>
+        <h2>AYÇA Insight’ı 2 Dakikada İnceleyin</h2>
+        <p>
+          Video içerisinde satış, stok, risk, kârlılık ve AI destekli karar ekranlarını
+          adım adım inceleyebilirsiniz.
+        </p>
       </div>
 
-      <div class="product-summary-card">
-        <h2>AYÇA Insight, eczanenin finansal ve operasyonel verilerini tek ekranda birleştirir.</h2>
-        <p>
-          Ciro, stok, kârlılık, risk ve kategori performansını daha anlaşılır hale getirir.
-          Amaç; eczacının veriye bakarak daha doğru karar almasını sağlamaktır.
-        </p>
+      <div class="video-frame">
+        <video
+          controls
+          playsinline
+          preload="metadata"
+          poster="./assets/ayca-insight-dashboard.png"
+        >
+          <source src="./assets/ayca-insight-demo.mp4" type="video/mp4">
+          Tarayıcınız video etiketini desteklemiyor.
+        </video>
       </div>
     </div>
   </section>
 
   <section class="section light">
     <div class="container">
-      <div class="hospital-highlight">
+      <div class="hospital-highlight insight-green">
         <div>
           <span class="badge">Yakında</span>
           <h2>Hospital Insight</h2>
           <p>
-            AYÇA Insight altyapısı, sağlık kurumları ve hastaneler için karar destek ekranlarına genişletilmektedir.
+            AYÇA Insight altyapısı; hastaneler ve sağlık kurumları için finans, operasyon ve yönetici karar destek ekranlarına genişletilmektedir.
           </p>
         </div>
-        <div class="hospital-mini-panel">
+
+        <div class="hospital-mini-panel insight-green-panel">
           <strong>Hospital Insight</strong>
           <span>Finans · Operasyon · Yönetici Paneli</span>
         </div>
       </div>
     </div>
   </section>
+
 </main>
 
 <footer>
@@ -127,6 +346,6 @@
   </div>
 </footer>
 
-<script src="/script.js?v=4.2"></script>
+<script src="/script.js?v=5.2"></script>
 </body>
 </html>
