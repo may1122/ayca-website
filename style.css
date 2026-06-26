@@ -651,3 +651,176 @@ footer {
   visibility: visible !important;
   transform: none !important;
 }
+
+
+/* === AYÇA V3.5 PREMIUM DOKUNUŞLAR === */
+body {
+  background:
+    radial-gradient(circle at 8% 12%, rgba(73, 169, 223, 0.10), transparent 28%),
+    radial-gradient(circle at 92% 18%, rgba(17, 185, 143, 0.08), transparent 24%),
+    #ffffff;
+}
+
+.navbar {
+  box-shadow: 0 10px 30px rgba(7, 56, 92, 0.04);
+}
+
+.nav-inner {
+  position: relative;
+}
+
+.nav-links {
+  padding: 10px 18px;
+  border: 1px solid rgba(219, 232, 245, 0.72);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 32px rgba(7, 56, 92, 0.04);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(235, 248, 255, 0.95), rgba(255, 255, 255, 0.85) 45%, rgba(241, 255, 250, 0.80)),
+    radial-gradient(circle at 85% 18%, rgba(73, 169, 223, 0.16), transparent 28%);
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 520px;
+  height: 520px;
+  right: -210px;
+  top: 70px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(17, 185, 143, 0.14), transparent 62%);
+  pointer-events: none;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  left: -190px;
+  bottom: -170px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(73, 169, 223, 0.16), transparent 62%);
+  pointer-events: none;
+}
+
+.hero-grid,
+.section .container {
+  position: relative;
+  z-index: 1;
+}
+
+.badge,
+.trust-badge {
+  box-shadow: 0 12px 28px rgba(7, 56, 92, 0.06);
+}
+
+.hero h1 {
+  text-wrap: balance;
+}
+
+.dashboard-card {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background:
+    linear-gradient(145deg, rgba(13, 70, 107, 0.98), rgba(7, 56, 92, 0.96)),
+    radial-gradient(circle at top right, rgba(73, 169, 223, 0.28), transparent 34%);
+}
+
+.dashboard-stats div,
+.calendar i {
+  backdrop-filter: blur(8px);
+}
+
+.products-section {
+  background:
+    linear-gradient(180deg, #ffffff, #f7fbff);
+}
+
+.product-panel {
+  position: relative;
+  isolation: isolate;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.98), rgba(248,252,255,0.96));
+  border: 1px solid rgba(190, 219, 240, 0.9);
+  transition: transform .25s ease, box-shadow .25s ease, border-color .25s ease;
+}
+
+.product-panel::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 12% 12%, rgba(11, 99, 246, 0.08), transparent 26%),
+    radial-gradient(circle at 90% 12%, rgba(17, 185, 143, 0.08), transparent 24%);
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.product-panel:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 26px 58px rgba(7, 56, 92, 0.12);
+  border-color: rgba(73, 169, 223, 0.55);
+}
+
+.product-image {
+  background:
+    linear-gradient(135deg, #f8fbff, #eef6ff);
+  min-height: 230px;
+  display: grid;
+  place-items: center;
+}
+
+.product-image img {
+  border-radius: 14px;
+}
+
+.feature-card,
+.why-card,
+.contact-card-box {
+  transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.feature-card:hover,
+.why-card:hover,
+.contact-card-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 24px 52px rgba(7, 56, 92, 0.11);
+}
+
+.feature-card {
+  background:
+    linear-gradient(145deg, #ffffff, #f8fcff);
+}
+
+.icon {
+  box-shadow: inset 0 0 0 1px rgba(73, 169, 223, 0.12);
+}
+
+.why-section {
+  background:
+    linear-gradient(180deg, #f7fbff, #ffffff),
+    radial-gradient(circle at bottom right, rgba(73, 169, 223, 0.12), transparent 35%);
+}
+
+.contact-items span {
+  box-shadow: inset 0 0 0 1px rgba(73, 169, 223, 0.14);
+}
+
+.footer-inner {
+  border-top: 1px solid rgba(219, 232, 245, 0.75);
+  padding-top: 10px;
+}
+
+@media (max-width: 980px) {
+  .nav-links {
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    padding: 0;
+  }
+}
