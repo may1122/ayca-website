@@ -4,133 +4,157 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>AYÇA Nöbet | Eczane Odaları İçin Akıllı Nöbet Planlama</title>
-  <link rel="stylesheet" href="/style.css?v=5.3" />
+  <link rel="stylesheet" href="/style.css?v=5.2" />
 
   <style>
-    /* AYÇA Nöbet V6.1 - hero sağ üst referans alanı */
-    .nobet-hero-grid{
-      align-items:center;
+    .nobet-page .product-premium-grid{
+      grid-template-columns: minmax(0,.86fr) minmax(560px,1.14fr);
+      gap: 56px;
+      align-items: center;
     }
 
-    .nobet-hero-copy .nobet-reference-card,
-    .nobet-hero-copy .nobet-metrics{
-      display:none;
+    .nobet-hero-right{
+      display:grid;
+      gap:22px;
+      align-items:start;
     }
 
-    .nobet-dashboard-visual{
-      position:relative;
-      overflow:visible;
-      padding-top:92px;
-    }
-
-    .nobet-dashboard-visual img{
-      position:relative;
-      z-index:1;
-      width:108%;
-      max-width:none;
-      transform:translateX(-2%);
-      border-radius:28px;
-      box-shadow:0 34px 80px rgba(7,56,92,.16);
-    }
-
-    .nobet-hero-info-panel{
-      position:absolute;
-      z-index:3;
-      top:0;
-      right:0;
-      width:min(520px, 92%);
-      padding:18px;
-      border:1px solid rgba(17,185,143,.28);
+    .nobet-reference-panel{
+      width:100%;
+      background:linear-gradient(135deg, rgba(232,255,249,.95), rgba(240,250,255,.96));
+      border:1px solid rgba(17,185,143,.30);
       border-radius:26px;
-      background:linear-gradient(135deg, rgba(232,255,248,.96), rgba(238,249,255,.96));
-      box-shadow:0 24px 60px rgba(7,56,92,.12);
-      backdrop-filter:blur(14px);
+      padding:22px;
+      box-shadow:0 22px 55px rgba(7,56,92,.10);
     }
 
-    .nobet-reference-inline{
-      display:flex;
+    .nobet-reference-panel .trust-badge{
+      display:grid;
+      grid-template-columns:auto 1fr;
+      gap:16px;
       align-items:center;
-      gap:14px;
-      padding:2px 4px 14px;
-      color:#007e68;
-      border-bottom:1px solid rgba(17,185,143,.18);
+      margin:0 0 18px 0;
+      width:100%;
+      border:none;
+      background:transparent;
+      padding:0 0 18px 0;
+      border-bottom:1px solid rgba(17,185,143,.22);
+      box-shadow:none;
+      border-radius:0;
     }
 
-    .nobet-reference-inline strong{
-      display:flex;
-      align-items:center;
-      gap:7px;
-      color:#007e68;
-      font-size:15px;
+    .nobet-reference-panel .trust-badge strong{
+      color:#008a72;
+      font-size:17px;
+      line-height:1.35;
       white-space:nowrap;
     }
 
-    .nobet-reference-inline span{
-      color:#08705f;
-      font-size:14px;
-      line-height:1.45;
+    .nobet-reference-panel .trust-badge span{
+      color:#007b68;
+      font-size:16px;
+      line-height:1.55;
     }
 
-    .nobet-metrics-inline{
+    .nobet-reference-panel .product-metrics{
+      margin-top:0;
       display:grid;
       grid-template-columns:repeat(3,1fr);
-      gap:10px;
-      margin-top:14px;
+      gap:14px;
     }
 
-    .nobet-metrics-inline div{
-      padding:14px 12px;
-      border-radius:18px;
+    .nobet-reference-panel .product-metrics div{
+      min-height:106px;
       background:#ffffff;
-      border:1px solid rgba(190,219,240,.78);
-      box-shadow:0 12px 28px rgba(7,56,92,.06);
+      border:1px solid rgba(190,219,240,.9);
+      border-radius:18px;
+      padding:18px;
+      box-shadow:0 14px 34px rgba(7,56,92,.07);
     }
 
-    .nobet-metrics-inline strong{
-      display:block;
+    .nobet-reference-panel .product-metrics strong{
       color:#07385c;
-      font-size:24px;
+      font-size:28px;
       line-height:1.1;
-      margin-bottom:5px;
+      display:block;
+      margin-bottom:10px;
     }
 
-    .nobet-metrics-inline span{
+    .nobet-reference-panel .product-metrics span{
       color:#42637f;
-      font-size:13px;
-      line-height:1.35;
+      font-size:15px;
     }
 
-    @media(max-width:980px){
-      .nobet-dashboard-visual{
-        padding-top:0;
-      }
-
-      .nobet-hero-info-panel{
-        position:relative;
-        width:100%;
-        margin-bottom:18px;
-      }
-
-      .nobet-dashboard-visual img{
-        width:100%;
-        transform:none;
-      }
+    .nobet-hero-right .product-premium-visual{
+      transform:none !important;
+      overflow:hidden;
     }
 
-    @media(max-width:620px){
-      .nobet-reference-inline{
-        align-items:flex-start;
-        flex-direction:column;
-        gap:6px;
-      }
+    .nobet-hero-right .product-premium-visual img{
+      width:100%;
+      height:auto;
+      min-height:390px;
+      object-fit:cover;
+      object-position:left top;
+      display:block;
+    }
 
-      .nobet-metrics-inline{
+    .nobet-page .breadcrumb{
+      font-size:14px;
+      color:#6c7f96;
+      margin-bottom:18px;
+      font-weight:700;
+    }
+
+    .nobet-page .product-premium-copy p{
+      font-size:21px;
+      line-height:1.75;
+    }
+
+    .product-video-section{
+      background:linear-gradient(180deg,#ffffff,#f7fbff);
+    }
+
+    .video-frame{
+      width:100%;
+      max-width:1080px;
+      margin:42px auto 0;
+      border-radius:26px;
+      overflow:hidden;
+      background:#071a3d;
+      box-shadow:0 28px 70px rgba(7,56,92,.18);
+      border:1px solid rgba(190,219,240,.9);
+    }
+
+    .video-frame video{
+      width:100%;
+      display:block;
+      background:#071a3d;
+    }
+
+    @media(max-width:1180px){
+      .nobet-page .product-premium-grid{
         grid-template-columns:1fr;
+      }
+      .nobet-reference-panel .product-metrics{
+        grid-template-columns:repeat(3,1fr);
+      }
+    }
+
+    @media(max-width:720px){
+      .nobet-reference-panel .trust-badge{
+        grid-template-columns:1fr;
+      }
+      .nobet-reference-panel .product-metrics{
+        grid-template-columns:1fr;
+      }
+      .nobet-hero-right .product-premium-visual img{
+        min-height:auto;
       }
     }
   </style>
 </head>
-<body>
+<body class="nobet-page">
 
 <header class="navbar">
   <div class="container nav-inner">
@@ -149,10 +173,10 @@
 
 <main>
 
-  <section class="product-premium-hero nobet-hero nobet-page-v6">
-    <div class="container product-premium-grid nobet-hero-grid">
+  <section class="product-premium-hero nobet-hero">
+    <div class="container product-premium-grid">
 
-      <div class="product-premium-copy nobet-hero-copy">
+      <div class="product-premium-copy">
         <div class="breadcrumb">Ana Sayfa / Ürünler / AYÇA Nöbet</div>
 
         <span class="badge">AYÇA Nöbet Planlama</span>
@@ -163,21 +187,19 @@
         </h1>
 
         <p>
-          AYÇA Nöbet; eczacı odalarının manuel nöbet planlama süreçlerini dakikalar içinde
-          dijital ortama taşır. Grup dengesi, bayram adaleti, eşlenik analizleri ve yönetmelik
-          kontrollerini tek platform üzerinden yönetmenizi sağlar.
+          AYÇA Nöbet; eczacı odalarının manuel nöbet planlama süreçlerini dakikalar içinde dijital ortama taşır.
+          Grup dengesi, bayram adaleti, eşlenik analizleri ve yönetmelik kontrollerini tek platform üzerinden yönetmenizi sağlar.
         </p>
-
       </div>
 
-      <div class="product-premium-visual nobet-dashboard-visual">
-        <div class="nobet-hero-info-panel">
-          <div class="nobet-reference-inline">
+      <div class="nobet-hero-right">
+        <div class="nobet-reference-panel">
+          <div class="trust-badge">
             <strong>🏛 Kurumsal Kullanımda</strong>
             <span>Kahramanmaraş Eczacı Odası tarafından aktif olarak kullanılmaktadır.</span>
           </div>
 
-          <div class="nobet-metrics-inline">
+          <div class="product-metrics">
             <div>
               <strong>182+</strong>
               <span>Aktif Eczane</span>
@@ -193,13 +215,15 @@
           </div>
         </div>
 
-        <img src="assets/ayca-nobet-dashboard.png" alt="AYÇA Nöbet Planlama dashboard ekranı">
+        <div class="product-premium-visual">
+          <img src="assets/ayca-nobet-dashboard.png" alt="AYÇA Nöbet Planlama dashboard ekranı">
+        </div>
       </div>
 
     </div>
   </section>
 
-  <section class="section light nobet-benefits-section">
+  <section class="section light">
     <div class="container">
       <div class="section-title">
         <span>Neden AYÇA Nöbet?</span>
@@ -210,47 +234,35 @@
         </p>
       </div>
 
-      <div class="premium-card-grid four nobet-benefit-grid">
+      <div class="premium-card-grid four">
         <div class="premium-info-card">
           <div class="icon">⚖</div>
           <h3>Adalet Algoritması</h3>
-          <p>
-            Her eczanenin nöbet yükünü matematiksel olarak dengeler ve kararların
-            şeffaf şekilde izlenmesini sağlar.
-          </p>
+          <p>Her eczanenin nöbet yükünü matematiksel olarak dengeler ve kararların şeffaf şekilde izlenmesini sağlar.</p>
         </div>
 
         <div class="premium-info-card">
           <div class="icon">👥</div>
           <h3>Grup ve Bölge Dengesi</h3>
-          <p>
-            Alt gruplar, bölgesel kurallar ve eşlenik ilişkileri aynı anda değerlendirerek
-            dengeli planlar oluşturur.
-          </p>
+          <p>Alt gruplar, bölgesel kurallar ve eşlenik ilişkileri aynı anda değerlendirerek dengeli planlar oluşturur.</p>
         </div>
 
         <div class="premium-info-card">
           <div class="icon">🎯</div>
           <h3>Bayram & Arefe Adaleti</h3>
-          <p>
-            Yıllar boyunca oluşan nöbet yükünü analiz eder, bayram ve arefe dağılımlarını
-            adil şekilde yönetir.
-          </p>
+          <p>Yıllar boyunca oluşan nöbet yükünü analiz eder, bayram ve arefe dağılımlarını adil şekilde yönetir.</p>
         </div>
 
         <div class="premium-info-card">
           <div class="icon">📊</div>
           <h3>Şeffaf Analiz ve Raporlama</h3>
-          <p>
-            Planlama sürecindeki tüm kararları raporlarla destekler, denetlenebilir ve
-            güvenilir bir yapı sunar.
-          </p>
+          <p>Planlama sürecindeki tüm kararları raporlarla destekler, denetlenebilir ve güvenilir bir yapı sunar.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section product-video-section nobet-video-section">
+  <section class="section product-video-section">
     <div class="container">
       <div class="section-title">
         <span>Ürünü Keşfedin</span>
@@ -261,7 +273,7 @@
         </p>
       </div>
 
-      <div class="video-frame nobet-video-frame">
+      <div class="video-frame">
         <video
           controls
           playsinline
@@ -289,6 +301,6 @@
   </div>
 </footer>
 
-<script src="/script.js?v=5.3"></script>
+<script src="/script.js?v=5.2"></script>
 </body>
 </html>
